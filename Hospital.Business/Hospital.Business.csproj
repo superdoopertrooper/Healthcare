@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Clinic.cs" />
+    <Compile Include="ClinicRepository.cs" />
     <Compile Include="Employee.cs" />
     <Compile Include="Encounter.cs" />
     <Compile Include="Patient.cs" />

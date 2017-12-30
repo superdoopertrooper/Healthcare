@@ -1,4 +1,5 @@
-﻿using Hospital.WebAPI.Models;
+﻿using Hospital.Business;
+using Hospital.WebAPI.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,13 +12,68 @@ namespace Hospital.WebAPI.Controllers
     public class ClinicController : ApiController
     {
 
+        /// <summary>
+        /// OkResult
+        /// NotFoundResult
+        /// ExceptionResult
+        /// UnauthorizedResult
+        /// BadRequestResult
+        /// ConflictResult
+        /// REdirectResult
+        /// InvalidModelStateResult
+        /// </summary>
+
+
+
+        ClinicRepository _clinicRepository = new ClinicRepository();
+
         public IHttpActionResult Get()
         {
-            ClinicViewModel clinicViewModel = new ClinicViewModel();
-            clinicViewModel.Id = 4;
-            clinicViewModel.Name = "Bright Smiles";
+
+            
+            ClinicViewModel clinicViewModel = new ClinicViewModel() { Id=4, Name= "Bright Smiles" } ;
+            
 
             return Ok(clinicViewModel);
+        }
+
+
+        public IHttpActionResult Get(int id)
+        {
+            var clinic = true; //_clinicRepository.FindOneById(id);
+
+            if (clinic==false)
+            {
+                return NotFound();
+            }
+            else
+            {
+                ClinicViewModel clinicViewModel = new ClinicViewModel() { Id = id, Name = "Bright Smiles" };
+                
+                return Ok(clinicViewModel);
+            }
+        }
+
+        /// <summary>
+        /// Lists Employees
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        [Route("api/clinic/{id}/employees")]
+        public IHttpActionResult GetEmployees(int id)
+        {
+            var clinic = true; //_clinicRepository.FindOneById(id);
+
+            if (clinic == false)
+            {
+                return NotFound();
+            }
+            else
+            {
+                Employee employee = new Employee() {  Id=69, Name="Employee1" };
+
+                return Ok(employee);
+            }
         }
 
 

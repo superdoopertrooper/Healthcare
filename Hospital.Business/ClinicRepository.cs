@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace Hospital.Business
 {
-    public class Patient
+    public class ClinicRepository
     {
+        public bool FindOneById(int id)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

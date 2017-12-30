@@ -8,6 +8,8 @@ namespace Hospital.WebAPI.Models
 {
     public class ClinicViewModel
     {
+        //min(1), name:alpha
+
         [Required]
         public int Id { get; set; }
         [MinLength(2)]

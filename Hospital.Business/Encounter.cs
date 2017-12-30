@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Hospital.Business
 {
-    class Encounter
+    public class Encounter
     {
     }
 }
