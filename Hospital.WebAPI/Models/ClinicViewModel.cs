@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Web;
 
-namespace Hospital.Business
+namespace Hospital.WebAPI.Models
 {
-    public class Clinic
+    public class ClinicViewModel
     {
         public int Id { get; set; }
         public string Name { get; set; }
+
     }
 }
