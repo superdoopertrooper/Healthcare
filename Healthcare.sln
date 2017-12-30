@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hospital.Business", "Hospit
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hospital.WebUI", "Hospital.WebUI\Hospital.WebUI.csproj", "{F6CED198-0D9E-429F-A3D7-5842AC18C418}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hospital.WebAPI", "Hospital.WebAPI\Hospital.WebAPI.csproj", "{42F94F30-87ED-4162-980F-63AE2129C262}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{F6CED198-0D9E-429F-A3D7-5842AC18C418}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F6CED198-0D9E-429F-A3D7-5842AC18C418}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F6CED198-0D9E-429F-A3D7-5842AC18C418}.Release|Any CPU.Build.0 = Release|Any CPU
+		{42F94F30-87ED-4162-980F-63AE2129C262}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42F94F30-87ED-4162-980F-63AE2129C262}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42F94F30-87ED-4162-980F-63AE2129C262}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42F94F30-87ED-4162-980F-63AE2129C262}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

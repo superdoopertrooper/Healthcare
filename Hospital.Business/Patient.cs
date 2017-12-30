@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Hospital.Business
 {
-    public class Class1
+    class Patient
     {
     }
 }
