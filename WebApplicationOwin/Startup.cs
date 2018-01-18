@@ -20,11 +20,6 @@ namespace WebApplicationOwin
                 OnIncomingRequest = (ctx) => ctx.Response.WriteAsync("from UseUSSS")
 
             });
-                
-        
-    
-
-
 
     app.Use(async (ctx, next) =>
             {
