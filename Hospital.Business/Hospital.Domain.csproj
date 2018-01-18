@@ -7,8 +7,8 @@
     <ProjectGuid>{054F39C3-767C-441B-9B79-6F3FD976E1F2}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Hospital.Business</RootNamespace>
-    <AssemblyName>Hospital.Business</AssemblyName>
+    <RootNamespace>Hospital.Domain</RootNamespace>
+    <AssemblyName>Hospital.Domain</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -40,10 +40,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BaseEntity.cs" />
     <Compile Include="Clinic.cs" />
     <Compile Include="ClinicRepository.cs" />
+    <Compile Include="ClinicService.cs" />
     <Compile Include="Employee.cs" />
     <Compile Include="Encounter.cs" />
+    <Compile Include="IBaseEntity.cs" />
     <Compile Include="Patient.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

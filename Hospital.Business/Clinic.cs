@@ -1,14 +1,15 @@
-﻿using System;
+﻿using Hospital.Domain;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Hospital.Business
+namespace JokeCategory
 {
-    public class Clinic
+    public class Clinic : BaseEntity
     {
-        public int Id { get; set; }
+
         public string Name { get; set; }
         public Employee Employees { get; set; }
     }

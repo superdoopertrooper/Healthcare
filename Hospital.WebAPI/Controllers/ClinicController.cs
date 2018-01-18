@@ -1,4 +1,4 @@
-﻿using Hospital.Business;
+﻿using JokeCategory;
 using Hospital.WebAPI.Models;
 using System;
 using System.Collections.Generic;
@@ -24,7 +24,7 @@ namespace Hospital.WebAPI.Controllers
         /// </summary>
 
 
-
+        ClinicService clinicService = new  ClinicService();
         ClinicRepository _clinicRepository = new ClinicRepository();
 
         public IHttpActionResult Get()
