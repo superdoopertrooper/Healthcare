@@ -1,13 +1,14 @@
-﻿using Microsoft.AspNet.Identity;
+﻿using Hospital.Middleware.Security;
+using Microsoft.AspNet.Identity;
 using Owin;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
 using System.Web;
-using WebApplicationOwin.Middleware;
-using WebApplicationOwin.Security;
+
 
 namespace WebApplicationOwin
 {
@@ -15,10 +16,38 @@ namespace WebApplicationOwin
     {
         public static void Configuration(IAppBuilder app)
         {
+            app.UseCookieAuthentication(new Microsoft.Owin.Security.Cookies.CookieAuthenticationOptions()
+            {
+                AuthenticationType = "ApplicationCookie",
+                LoginPath = new Microsoft.Owin.PathString("/account/login")
+            });
+
+            app.Use(async (ctx, next) =>
+                    {
+                        //var identity = new ClaimsIdentity("ApplicationCookie");
+                        //identity.AddClaims(new List<Claim>()
+                        //{ 
+                        //new Claim(ClaimTypes.NameIdentifier, "remzyId"),
+                        //new Claim(ClaimTypes.Name, "remzy"),
+                        //new Claim(ClaimTypes.Email, "remzymoen@hot")
+
+                        ////identityprovider
+
+                        //});
+
+                        //HttpContext.Current.GetOwinContext().Authentication.SignIn(identity);
+
+                        Debug.WriteLine("outgoing " + ctx.Request.Path);
+                        await next();
+                    });
+
             app.UseExternalSignInCookie(DefaultAuthenticationTypes.ExternalCookie);
             app.UseFacebookAuthentication(
                appId: "1234",
                appSecret: "1234");
+
+
+
 
             //app.UseUSSS(new USSSOptions()
             //{

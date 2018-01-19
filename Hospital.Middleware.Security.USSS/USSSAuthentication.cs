@@ -2,18 +2,18 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
-using System.Web;
 using AppFunc = System.Func<System.Collections.Generic.IDictionary<string, object>, System.Threading.Tasks.Task>;
 
-namespace WebApplicationOwin.Security
+namespace Hospital.Middleware.Security
 {
-    public class USSS
+    public class USSSAuthentication
     {
         private AppFunc _next;
-        private USSSOptions _options;
+        private USSSAuthenticationOptions _options;
 
-        public USSS(Func<IDictionary<string, object>, Task> next, USSSOptions options)
+        public USSSAuthentication(Func<IDictionary<string, object>, Task> next, USSSAuthenticationOptions options)
         {
             _next = next;
             _options = options;
