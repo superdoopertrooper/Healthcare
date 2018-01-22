@@ -30,7 +30,8 @@
     </div>
     <div class="container body-content">
         @HttpContext.Current.User.Identity.Name
-        <div><a href="/Account/Logout">Log out</a></div>
+ 
+          @Html.ActionLink("Secured Page", "index", "secured")
         @RenderBody()
         <hr />
         <footer>
