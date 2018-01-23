@@ -6,10 +6,9 @@ using System.Web.Mvc;
 
 namespace WebApplicationOwin.Controllers
 {
-    public class SecretController : Controller
+    public class SubjectController : Controller
     {
-        
-        [Authorize]
+        // GET: Subject
         public ActionResult Index()
         {
             return View();

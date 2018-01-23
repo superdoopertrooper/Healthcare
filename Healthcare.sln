@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hospital.Middleware.Securit
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplicationIndividualAccount", "WebApplicationIndividualAccount\WebApplicationIndividualAccount.csproj", "{3BD04FB0-EC14-4D7A-963A-C675616AFB6A}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "julie", "julie", "{B0C1030D-6DBA-4F4D-BC47-910D60B10AD3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -66,6 +68,11 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A05FCFB8-F117-4D69-B8E6-4F997E88240E} = {B0C1030D-6DBA-4F4D-BC47-910D60B10AD3}
+		{054F39C3-767C-441B-9B79-6F3FD976E1F2} = {B0C1030D-6DBA-4F4D-BC47-910D60B10AD3}
+		{C6451228-70D7-4D85-B0C8-D8B7B8889891} = {B0C1030D-6DBA-4F4D-BC47-910D60B10AD3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0D977DAB-07C2-4EFC-A602-94CBE82EE00D}

@@ -9,7 +9,7 @@ namespace Hospital.Middleware.Security.USSS
 {
     public static class USSSAuthenticationExtensions
     {
-        public static void UseUSSS(this IAppBuilder app, USSSAuthenticationOptions options = null)
+        public static void USSSAuthentication(this IAppBuilder app, USSSAuthenticationOptions options = null)
         {
             if (options == null)
             {

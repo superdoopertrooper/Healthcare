@@ -179,12 +179,17 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AgencyController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\SecretController.cs" />
+    <Compile Include="Controllers\SecuredController.cs" />
+    <Compile Include="Controllers\SubjectController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Enums\AddressType.cs" />
+    <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -227,10 +232,13 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
     <Content Include="Views\Account\Login.cshtml" />
-    <Content Include="Views\Secret\Index.cshtml" />
+    <Content Include="Views\Secured\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Agency\" />
+    <Folder Include="Views\Subject\" />
+    <Folder Include="Views\User\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -246,6 +254,14 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Hospital.Business\Hospital.Domain.csproj">
+      <Project>{054f39c3-767c-441b-9b79-6f3fd976e1f2}</Project>
+      <Name>Hospital.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Hospital.Data\Hospital.Data.csproj">
+      <Project>{a05fcfb8-f117-4d69-b8e6-4f997e88240e}</Project>
+      <Name>Hospital.Data</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Hospital.Middleware.Security.USSS\Hospital.Middleware.Security.USSS.csproj">
       <Project>{50EE5495-FD01-4A7C-9AFF-071524CB44F3}</Project>
       <Name>Hospital.Middleware.Security.USSS</Name>

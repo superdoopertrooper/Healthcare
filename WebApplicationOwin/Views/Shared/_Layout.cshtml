@@ -30,7 +30,16 @@
     </div>
     <div class="container body-content">
         @HttpContext.Current.User.Identity.Name
+        @if (User.Identity.IsAuthenticated)
+    {
         <div><a href="/Account/Logout">Log out</a></div>
+
+}
+else
+{
+    <div><a href="/Account/Login">Log In</a></div>
+}
+        <div><a href="/secured/index">Claims</a></div>
         @RenderBody()
         <hr />
         <footer>

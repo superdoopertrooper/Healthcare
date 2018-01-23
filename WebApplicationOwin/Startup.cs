@@ -1,4 +1,5 @@
 ﻿using Hospital.Middleware.Security;
+using Hospital.Middleware.Security.USSS;
 using Microsoft.AspNet.Identity;
 using Owin;
 using System;
@@ -21,7 +22,7 @@ namespace WebApplicationOwin
                 AuthenticationType = "ApplicationCookie",
                 LoginPath = new Microsoft.Owin.PathString("/account/login")
             });
-
+     
             app.Use(async (ctx, next) =>
                     {
                         //var identity = new ClaimsIdentity("ApplicationCookie");
@@ -46,7 +47,7 @@ namespace WebApplicationOwin
                appId: "1234",
                appSecret: "1234");
 
-
+           // app.USSSAuthentication();
 
 
             //app.UseUSSS(new USSSOptions()
@@ -61,6 +62,9 @@ namespace WebApplicationOwin
             //    //Debug.WriteLine("outgoing " + ctx.Request.Path);
             //});
 
+ 
+
+            
         }
     }
 }

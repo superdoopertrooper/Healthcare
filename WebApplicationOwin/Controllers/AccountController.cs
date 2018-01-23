@@ -36,6 +36,11 @@ namespace WebApplicationOwin.Controllers
                         });
 
             HttpContext.GetOwinContext().Authentication.SignIn(identity);
+
+            if (string.IsNullOrEmpty(vm.ReturnUrl))
+            {
+                vm.ReturnUrl = "/";
+            }
             return Redirect(vm.ReturnUrl);
         }
 
