@@ -61,10 +61,6 @@
       <Project>{42f94f30-87ed-4162-980f-63ae2129c262}</Project>
       <Name>Hospital.WebAPI</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Hospital.WebUI\Hospital.WebUI.csproj">
-      <Project>{f6ced198-0d9e-429f-a3d7-5842ac18c418}</Project>
-      <Name>Hospital.WebUI</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -7,8 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hospital.Data", "Hospital.D
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hospital.Domain", "Hospital.Business\Hospital.Domain.csproj", "{054F39C3-767C-441B-9B79-6F3FD976E1F2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hospital.WebUI", "Hospital.WebUI\Hospital.WebUI.csproj", "{F6CED198-0D9E-429F-A3D7-5842AC18C418}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hospital.WebAPI", "Hospital.WebAPI\Hospital.WebAPI.csproj", "{42F94F30-87ED-4162-980F-63AE2129C262}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hospital.Shared", "Hospital.Shared\Hospital.Shared.csproj", "{E537D1B2-59B2-466D-BA9F-C4275E842378}"
@@ -22,6 +20,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplicationIndividualAccount", "WebApplicationIndividualAccount\WebApplicationIndividualAccount.csproj", "{3BD04FB0-EC14-4D7A-963A-C675616AFB6A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "julie", "julie", "{B0C1030D-6DBA-4F4D-BC47-910D60B10AD3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{233A3C81-3D2B-4B85-B8C5-31D47E997C96}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleAppClaims", "ConsoleAppClaims\ConsoleAppClaims.csproj", "{4674B2EC-75C6-44EB-B4BF-CE02184203A3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -37,10 +39,6 @@ Global
 		{054F39C3-767C-441B-9B79-6F3FD976E1F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{054F39C3-767C-441B-9B79-6F3FD976E1F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{054F39C3-767C-441B-9B79-6F3FD976E1F2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F6CED198-0D9E-429F-A3D7-5842AC18C418}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F6CED198-0D9E-429F-A3D7-5842AC18C418}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F6CED198-0D9E-429F-A3D7-5842AC18C418}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F6CED198-0D9E-429F-A3D7-5842AC18C418}.Release|Any CPU.Build.0 = Release|Any CPU
 		{42F94F30-87ED-4162-980F-63AE2129C262}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{42F94F30-87ED-4162-980F-63AE2129C262}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{42F94F30-87ED-4162-980F-63AE2129C262}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -65,6 +63,14 @@ Global
 		{3BD04FB0-EC14-4D7A-963A-C675616AFB6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3BD04FB0-EC14-4D7A-963A-C675616AFB6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3BD04FB0-EC14-4D7A-963A-C675616AFB6A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{233A3C81-3D2B-4B85-B8C5-31D47E997C96}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{233A3C81-3D2B-4B85-B8C5-31D47E997C96}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{233A3C81-3D2B-4B85-B8C5-31D47E997C96}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{233A3C81-3D2B-4B85-B8C5-31D47E997C96}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4674B2EC-75C6-44EB-B4BF-CE02184203A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4674B2EC-75C6-44EB-B4BF-CE02184203A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4674B2EC-75C6-44EB-B4BF-CE02184203A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4674B2EC-75C6-44EB-B4BF-CE02184203A3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

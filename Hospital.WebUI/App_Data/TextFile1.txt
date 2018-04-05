@@ -1,0 +1,12 @@
+﻿IIdentity
+
+Iprincipal
+
+
+WindowsPrincipal
+
+WindowsIdentity
+
+if you are using windows authentication, then 
+Wiindows.GetCurrent();
+
