@@ -1,0 +1,68 @@
+﻿
+@{
+    ViewBag.Title = "CheckValidation";
+}
+
+<h2>CheckValidation</h2>
+
+<form id="form" name="form">
+    <div>
+        Thank you for your registration, 
+        <span data-bind="text: firstName"></span>
+        <span data-bind="text: lastName"></span>
+        <br /><br />
+        <button data-bind="click: startOver">Start Over</button>
+    </div>
+    <div class="demo-section k-content">
+
+        <label for="firstName">First Name: <input id="firstName" name="firstName" placeholder="firstName" data-bind="value: firstName"  required/></label>
+        <label>Last Name: <input data-bind="value: lastName" /></label>
+        <label>
+            Gender:
+            <select data-bind="source: genders, value: gender"></select>
+        </label>
+        <label><input type="checkbox" data-bind="checked: agreed" /> I have read the licence agreement</label>
+        <button data-bind="enabled: agreed, click: register">Register</button>
+        <div data-bind="visible: confirmed">
+
+        </div>
+
+    </div>
+</form>
+
+<script>
+    $(document).ready(function () {
+        console.log("ready!");
+        var validator = $("#ticketsForm").kendoValidator().data("kendoValidator");
+        var viewModel = kendo.observable({
+            firstName: "John",
+            lastName: "Doe",
+            genders: GetValues(),
+            gender: "Male",
+            agreed: false,
+            confirmed: false,
+            register: function (e) {
+                e.preventDefault();
+                if (validator.validate()) {
+                    alert("valid");
+                }
+                else {
+                    alert("NOT valid");
+                }
+                this.set("confirmed", true);
+            },
+            startOver: function () {
+                this.set("confirmed", false);
+                this.set("agreed", false);
+                this.set("gender", "Male");
+                this.set("firstName", "John");
+                this.set("lastName", "Doe");
+            }
+        });
+        function GetValues() {
+            return ["Male", "Female","Both"];
+        }
+        kendo.bind($("form"), viewModel);
+      
+    });
+</script>

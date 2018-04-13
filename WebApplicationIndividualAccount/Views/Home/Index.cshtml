@@ -7,8 +7,117 @@
 <link rel="stylesheet" href="styles/kendo.common.min.css" />
 <link rel="stylesheet" href="styles/kendo.default.min.css" />
 <link rel="stylesheet" href="styles/kendo.default.mobile.min.css" />
+<ul id="menu" data-role="menu" class="k-widget k-reset k-header k-menu k-menu-horizontal" tabindex="0" role="menubar">
+    <li aria-haspopup="true" class="k-item k-state-default k-first" role="menuitem" style="z-index: auto;">
+        <span class="k-link">
+            Products
+            <span class="k-icon k-i-arrow-60-down k-menu-expand-arrow"></span>
+        </span>
+        <div class="k-animation-container" style="width: 96px; height: 110px; overflow: hidden; display: none; position: absolute; z-index: 10002; top: 31px; left: 0px;" aria-hidden="true">
+            <ul class="k-group k-menu-group k-popup k-reset" role="menu" data-role="popup" style="display: none; position: absolute; font-size: 14px; font-family: Arial, Helvetica, sans-serif; font-stretch: 100%; font-style: normal; font-weight: 400; line-height: normal; transform: translateY(-111px);" aria-hidden="true">
+                <li aria-haspopup="true" class="k-item k-state-default k-first" role="menuitem">
+                    <span class="k-link">
+                        Furniture
+                        <span class="k-icon k-i-arrow-60-right k-menu-expand-arrow"></span>
+                    </span><ul class="k-group k-menu-group" role="menu" aria-hidden="true">
+                        <li class="k-item k-state-default k-first" role="menuitem"><span class="k-link">Tables &amp; Chairs</span></li>
+                        <li class="k-item k-state-default" role="menuitem"><span class="k-link">Sofas</span></li>
+                        <li class="k-item k-state-default" role="menuitem"><span class="k-link">Occasional Furniture</span></li>
+                        <li class="k-item k-state-default" role="menuitem"><span class="k-link">Children's Furniture</span></li>
+                        <li class="k-item k-state-default k-last" role="menuitem"><span class="k-link">Beds</span></li>
+                    </ul>
 
-<ul id="menu">
+
+                </li>
+                <li aria-haspopup="true" class="k-item k-state-default" role="menuitem">
+                    <span class="k-link">
+                        Decor
+                        <span class="k-icon k-i-arrow-60-right k-menu-expand-arrow"></span>
+                    </span><ul class="k-group k-menu-group" role="menu" aria-hidden="true">
+                        <li class="k-item k-state-default k-first" role="menuitem"><span class="k-link">Bed Linen</span></li>
+                        <li class="k-item k-state-default" role="menuitem"><span class="k-link">Throws</span></li>
+                        <li class="k-item k-state-default" role="menuitem"><span class="k-link">Curtains &amp; Blinds</span></li>
+                        <li class="k-item k-state-default" role="menuitem"><span class="k-link">Rugs</span></li>
+                        <li class="k-item k-state-default k-last" role="menuitem"><span class="k-link">Carpets</span></li>
+                    </ul>
+                </li>
+                <li aria-haspopup="true" class="k-item k-state-default" role="menuitem">
+                    <span class="k-link">
+                        Storage
+                        <span class="k-icon k-i-arrow-60-right k-menu-expand-arrow"></span>
+                    </span><ul class="k-group k-menu-group" role="menu" aria-hidden="true">
+                        <li class="k-item k-state-default k-first" role="menuitem"><span class="k-link">Wall Shelving</span></li>
+                        <li class="k-item k-state-default" role="menuitem"><span class="k-link">Kids Storage</span></li>
+                        <li class="k-item k-state-default" role="menuitem"><span class="k-link">Baskets</span></li>
+                        <li class="k-item k-state-default" role="menuitem"><span class="k-link">Multimedia Storage</span></li>
+                        <li class="k-item k-state-default" role="menuitem"><span class="k-link">Floor Shelving</span></li>
+                        <li class="k-item k-state-default" role="menuitem"><span class="k-link">Toilet Roll Holders</span></li>
+                        <li class="k-item k-state-default" role="menuitem"><span class="k-link">Storage Jars</span></li>
+                        <li class="k-item k-state-default" role="menuitem"><span class="k-link">Drawers</span></li>
+                        <li class="k-item k-state-default k-last" role="menuitem"><span class="k-link">Boxes</span></li>
+                    </ul>
+
+                </li>
+                <li aria-haspopup="true" class="k-item k-state-default k-last" role="menuitem">
+                    <span class="k-link">
+                        Lights
+                        <span class="k-icon k-i-arrow-60-right k-menu-expand-arrow"></span>
+                    </span><ul class="k-group k-menu-group" role="menu" aria-hidden="true">
+                        <li class="k-item k-state-default k-first" role="menuitem"><span class="k-link">Ceiling</span></li>
+                        <li class="k-item k-state-default" role="menuitem"><span class="k-link">Table</span></li>
+                        <li class="k-item k-state-default" role="menuitem"><span class="k-link">Floor</span></li>
+                        <li class="k-item k-state-default" role="menuitem"><span class="k-link">Shades</span></li>
+                        <li class="k-item k-state-default" role="menuitem"><span class="k-link">Wall Lights</span></li>
+                        <li class="k-item k-state-default" role="menuitem"><span class="k-link">Spotlights</span></li>
+                        <li class="k-item k-state-default" role="menuitem"><span class="k-link">Push Light</span></li>
+                        <li class="k-item k-state-default k-last" role="menuitem"><span class="k-link">String Lights</span></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </li>
+    <li aria-haspopup="true" class="k-item k-state-default" role="menuitem">
+        <span class="k-link">
+            Stores
+            <span class="k-icon k-i-arrow-60-down k-menu-expand-arrow"></span>
+        </span><ul class="k-group k-menu-group" role="menu" aria-hidden="true">
+            <li class="k-item k-state-default k-first k-last" role="menuitem">
+                <div id="template" style="padding: 10px;" class="k-content" tabindex="-1">
+                    <h2>Around the Globe</h2>
+                    <ol>
+                        <li>United States</li>
+                        <li>Europe</li>
+                        <li>Canada</li>
+                        <li>Australia</li>
+                    </ol>
+                    <img src="../content/web/menu/map.png" alt="Stores Around the Globe">
+                    <button class="k-button">See full list</button>
+                </div>
+            </li>
+        </ul>
+    </li>
+    <li class="k-item k-state-default" role="menuitem">
+        <span class="k-link">
+            Blog
+        </span>
+    </li>
+    <li class="k-item k-state-default" role="menuitem">
+        <span class="k-link">
+            Company
+        </span>
+    </li>
+    <li class="k-item k-state-default" role="menuitem">
+        <span class="k-link">
+            Events
+        </span>
+    </li>
+    <li class="k-item k-state-disabled k-last" aria-disabled="true" role="menuitem">
+        <span class="k-link">
+            News
+        </span>
+    </li>
+</ul>
+<ul id="menu2">
     <li>one</li>
     <li>
         two22333
