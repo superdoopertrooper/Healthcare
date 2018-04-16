@@ -7,7 +7,7 @@
 
 <form id="form" name="form">
     <div>
-        Thank you for your registration, 
+        Thank you for your registration,
         <span data-bind="text: firstName"></span>
         <span data-bind="text: lastName"></span>
         <br /><br />
@@ -15,8 +15,8 @@
     </div>
     <div class="demo-section k-content">
 
-        <label for="firstName">First Name: <input id="firstName" name="firstName" placeholder="firstName" data-bind="value: firstName"  required/></label>
-        <label>Last Name: <input data-bind="value: lastName" /></label>
+        <label for="firstName">First Name: <input id="firstName" name="firstName"    placeholder="firstName" data-bind="value: firstName" required /></label>
+        <label>Last Name: <input id="lastnamee" name="lasname" data-bind="value: lastName" required /></label>
         <label>
             Gender:
             <select data-bind="source: genders, value: gender"></select>
@@ -33,7 +33,84 @@
 <script>
     $(document).ready(function () {
         console.log("ready!");
-        var validator = $("#ticketsForm").kendoValidator().data("kendoValidator");
+        var validator = $("#form").kendoValidator(
+            {
+                rules: {
+                    required: function (input) {
+                        var check = input;
+                        if (input.is("[name=lasname]")) {
+                            var test = input.val();
+                            if (test.length == 0) {
+                                return false;
+                            }
+                            else {
+                                return true;
+                            }
+                        }
+                        return true;
+                    },
+                    greaterthan2: function (input) {
+                        var check = input;
+                        if (input.is("[name=lasname]")) {
+                            var test = input.val();
+                            if (test.length < 2) {
+                                return false;
+                            }
+                            else {
+                                return true;
+                            }
+                        }
+                        return true;
+                    },
+                     cantbetest: function (input) {
+                        var check = input;
+                        if (input.is("[name=lasname]")) {
+                            var test = input.val();
+                            if (test === "test") {
+                            return false;
+                            }
+                            else {
+                                return true;
+                            }
+                        }
+                        return true;
+                    },
+                    firstNameCantbeJohn: function (input) {
+                        var check = input;
+                        if (input.is("[name=lasname]")) {
+                            var firstName = $("#firstName").val();
+                            if (firstName === "John") {
+                                return false;
+                            }
+                            else {
+                                return true;
+                            }
+                        }
+                        return true;
+                    },
+                    changeFirstName: function (input) {
+                        if (input.is("[name=firstName]")) {
+                            var firstName = input.val();
+                            if (firstName === "John") {
+                                return false;
+                            }
+                            else {
+                                return true;
+                            }
+                        }
+                        return true;
+                    }
+
+                },
+                messages: {
+                    required: "Last Name is Required",
+                    greaterthan2: "must be at least 2 letters",
+                    cantbetest: "can't be test",
+                    firstNameCantbeJohn: "1st name can't be John.",
+                    changeFirstName:"Change first Name"
+                }
+            }
+        ).data("kendoValidator");
         var viewModel = kendo.observable({
             firstName: "John",
             lastName: "Doe",
@@ -60,9 +137,9 @@
             }
         });
         function GetValues() {
-            return ["Male", "Female","Both"];
+            return ["Male", "Female", "Both"];
         }
         kendo.bind($("form"), viewModel);
-      
+
     });
 </script>
