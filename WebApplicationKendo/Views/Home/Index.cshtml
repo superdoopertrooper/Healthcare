@@ -75,6 +75,10 @@
         var piece3 = text.substring(6); //7890
         return kendo.format("({0})-{1}-{2}", piece1, piece2, piece3);
     }
+function RemoveNonNumbers(text) {
+		text = text.replace(/\D/g, '');
+		return text;
+	}
 
     //https://www.telerik.com/forums/masked-input-for-inline-grid-editing
     function phoneNumberEditor(container, options) {
