@@ -30,6 +30,106 @@
         </div>
     </div>*@
 
+<div id="grid"></div>
+<input id="phone_number" value="555 123 4567" />
+
+<script>
+    //$(document).ready(function () { });
+
+    var persons = [{ name: "Remzy" }, { name: "Remzy" }, { name: "Remzy" }, { name: "Remzy" }];
+    var data = {
+        transport: {
+            read: {
+                //url: "https://demos.telerik.com/kendo-ui/service/Products",
+                //url: "https://demos.telerik.com/kendo-ui/service/customers",
+                //url: "https://demos.telerik.com/kendo-ui/service/products",
+                //url: "https://demos.telerik.com/kendo-ui/service/meetings",
+                url: "https://demos.telerik.com/kendo-ui/service/employeeDirectory",
+                dataType: "jsonp"
+            }
+        }
+    };
+    var local =
+        [
+            {
+                date: "Feb 13 2014",
+                price: 5,
+                phone: "7034726713"
+            },
+            {
+                date: "Feb 15 2014",
+                price: 7,
+                phone: "7034726713"
+            },
+            {
+                date: "Feb 12 2014",
+                price: 6,
+                phone: "7034726713"
+            }
+        ]
+        ;
+    function FormatPhoneNumber(phoneNumber) {
+        var text = phoneNumber.replace("(", "").replace(")", "").replace(" ", "");
+        var piece1 = text.substring(0, 3); //123
+        var piece2 = text.substring(3, 6); //456
+        var piece3 = text.substring(6); //7890
+        return kendo.format("({0})-{1}-{2}", piece1, piece2, piece3);
+    }
+
+    //https://www.telerik.com/forums/masked-input-for-inline-grid-editing
+    function phoneNumberEditor(container, options) {
+        $('<input id="phone" data-text-field="phone" data-value-field="phone" data-bind="value:' + options.field + '"/>')
+            .appendTo(container)
+            .kendoMaskedTextBox({
+                mask: "(999) 999-9999",
+                value: options.phone
+            });
+    }
+
+    $(function () {
+        $("#phone_number").kendoMaskedTextBox({
+            mask: "(999) 000-0000"
+        });
+
+        $("#grid").kendoGrid({
+            dataSource: local,
+            pageSize: 5,
+            pageable: {
+                refresh: true,
+                pageSizes: true,
+                buttonCount: 5
+            },
+            scrollable: true,
+            height: "500",
+            editable: true,
+            columns: [
+                {
+                    field: "date",
+                    title: "Contact Name"
+                },
+                {
+                    field: "phone",
+                    title: "Phone",
+                    template: '#= (phone) ? FormatPhoneNumber(phone) : "none" #',
+                    editor: phoneNumberEditor
+
+                },
+                {
+                    field: "phone",
+                    title: "phone"
+                },
+                {
+                    field: "price",
+                    title: "price",
+                    format: "{0:c}"
+                }
+            ]
+
+        });
 
 
- 
+    });
+
+
+</script>
+
